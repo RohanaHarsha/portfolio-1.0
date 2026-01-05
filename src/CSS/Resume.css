@@ -1,0 +1,220 @@
+/* RESUME PAGE */
+.resume-page {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #222;
+}
+
+.resume-title h2 {
+  font-size: 2.5rem;
+  color: #eaeaea;
+  margin: 0 0 0.5rem 0;
+}
+
+.resume-subtitle {
+  font-size: 1rem;
+  color: #eaeaea;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background-color: #eaeaea;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 234, 234, 0.2);
+}
+
+.download-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.download-btn:hover svg {
+  transform: translateY(2px);
+}
+
+/* PDF VIEWER */
+.resume-viewer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  background-color: #141414;
+  border: 1px solid #222;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  min-height: 800px;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+  border: none;
+  background-color: #1a1a1a;
+}
+
+/* LOADING INDICATOR */
+.loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #222;
+  border-top-color: #eaeaea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-indicator p {
+  color: #eaeaea;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* ACTION BUTTONS */
+.resume-actions {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.action-button.primary {
+  background-color: #eaeaea;
+  color: #0f0f0f;
+}
+
+.action-button.primary:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 234, 234, 0.2);
+}
+
+.action-button.secondary {
+  background-color: transparent;
+  color: #eaeaea;
+  border: 1px solid #333;
+}
+
+.action-button.secondary:hover {
+  border-color: #eaeaea;
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.action-button svg {
+  transition: transform 0.2s ease;
+}
+
+.action-button:hover svg {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .resume-page {
+    padding: 2rem 1rem;
+  }
+
+  .resume-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .resume-title h2 {
+    font-size: 2rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .resume-viewer {
+    min-height: 600px;
+  }
+
+  .pdf-frame {
+    min-height: 600px;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+  }
+
+  .action-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-viewer {
+    min-height: 500px;
+  }
+
+  .pdf-frame {
+    min-height: 500px;
+  }
+}
