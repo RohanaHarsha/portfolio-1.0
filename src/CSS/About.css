@@ -1,59 +1,156 @@
-/* ABOUT PAGE - DIAGONAL SPLIT LAYOUT */
+
 .about-diagonal {
   position: relative;
   min-height: 100vh;
   display: flex;
+  background-color: #0f0f0f;
   overflow: hidden;
 }
 
+
 .about-content {
-  width: 70%;
-  padding: 4rem 3rem;
+  width: 60%;
+  padding: 4rem 4rem 4rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 2;
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
   background-color: #0f0f0f;
 }
 
-.about-image {
-  width: 30%;
+
+.animated-text-container {
   position: relative;
-  display: flex;
+  height: 300px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #eaeaea;
+  margin: 0 0 1.5rem 0;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* DESCRIPTION */
+.about-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #eaeaea;
+  opacity: 0.85;
+  margin: 0 0 2rem 0;
+  max-width: 600px;
+}
+
+/* CTA BUTTON */
+.cta-button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Button styling */
-.btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.875rem 2rem;
+  padding: 1rem 2.5rem;
   background-color: #eaeaea;
   color: #0f0f0f;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
   width: fit-content;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn:hover {
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
   background-color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(234, 234, 234, 0.3);
 }
 
-/* Responsive design */
+/* This adjust the picture container */
+.about-image-section {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  z-index: 1;
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* IMAGE WRAPPER */
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(10%) brightness(0.95);
+  transition: all 0.5s ease;
+}
+
+.image-wrapper:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.02);
+}
+
+/* DECORATIVE GRADIENT OVERLAY */
+.about-image-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 15, 15, 0.2) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .about-content {
+    padding: 3rem 2rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+  }
+
+  .animated-text-container {
+    height: 250px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-diagonal {
     flex-direction: column;
@@ -61,11 +158,51 @@
   
   .about-content {
     width: 100%;
-    clip-path: none;
+    padding: 3rem 1.5rem;
+    min-height: 60vh;
+    position: relative;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .animated-text-container {
+    height: 200px;
   }
   
-  .about-image {
+  .about-image-section {
     width: 100%;
+    height: 500px;
+    min-height: 40vh;
+    position: relative;
+    clip-path: none;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    padding: 2rem 1rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .animated-text-container {
+    height: 150px;
+  }
+
+  .about-image-section {
     height: 400px;
   }
 }

@@ -1,13 +1,13 @@
-import TextPressure from '../components/TextPressure';
 import '../CSS/About.css';
+import TextPressure from '../components/TextPressure';
 
 export default function About() {
     return (
         <section className="about-diagonal">
             <div className="about-content">
-                <div style={{ position: 'relative', height: '300px', paddingBottom: '0px' }}>
+                <div className="animated-text-container">
                     <TextPressure
-                        text="Software"
+                        text={"Rohana"+"  "+"Harsha"}
                         flex={true}
                         alpha={false}
                         stroke={false}
@@ -19,19 +19,29 @@ export default function About() {
                         minFontSize={36}
                     />
                 </div>
-                <h1>Engineer</h1>
-                <p>
+
+                <h1 className="main-title">Software Developer</h1>
+
+                <p className="about-description">
                     I build fast, maintainable web interfaces using React.
                     I focus on clarity, performance, and clean component design.
                 </p>
 
-                <a href="/path-to-your-resume.pdf" download className="download-resume-button">
-                    Download Resume
+                <a href="#projects" className="cta-button">
+                    View Projects
                 </a>
             </div>
             
-            <div className="about-image">
-                <img src="/path-to-your-image.jpg" alt="Your Name" />
+            <div className="about-image-section">
+                <div className="image-wrapper">
+                    <img 
+                        src="/public/profile/profile.png" 
+                        alt="Your Name" 
+                        onError={(e) => {
+                            e.target.src = 'https://via.placeholder.com/400x600/141414/eaeaea?text=Your+Photo';
+                        }}
+                    />
+                </div>
             </div>
         </section>
     );
