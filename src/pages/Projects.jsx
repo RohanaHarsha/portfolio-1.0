@@ -28,8 +28,8 @@ export default function Projects() {
     {
       title: "Word-classification-model",
       description: "This model was created to collaborate with daffodilzone website and enhances search functionality by allowing users to enter natural language queries. It extracts relevant keywords related to real estate and housing, ensuring more accurate and reliable search results.",
-      image: "/projects/project3.jpg",
-      technologies: ["React", "Firebase", "Stripe"],
+      image: "/public/projects/classification_model.png",
+      technologies: ["Python", "Tensorflow", "NumPy"],
       liveUrl: "",
       githubUrl: "https://github.com/RohanaHarsha/Word-classification-model",
       isLive: false,
