@@ -8,7 +8,7 @@ export default function Projects() {
     {
       title: "Daffodil Zone",
       description: "A real-world web app built with React. Focused on performance and clean state management.",
-      image: "/public/projects/daffodil (1).png", // Add your project images to public/projects/
+      image: "/Projects/daffodil_zone.png", // Add your project images to public/projects/
       technologies: ["React", "JavaScript", "Flask", "vercel", "render"],
       liveUrl: "https://daffodilzone.vercel.app/",
       githubUrl: "https://github.com/RohanaHarsha/daffodilzone",
@@ -18,7 +18,7 @@ export default function Projects() {
     {
       title: "Pocket_Base_Test-Guest_Management",
       description: "This is a Simple UI to to test newest database technology PocketBase. It is simple, reliable and effective and beginner and user friendly. If you want to to try it be my guest, clone the repo and enjoy",
-      image: "/public/projects/pocketbase.png",
+      image: "/Projects/pocketbase.png",
       technologies: ["React", "Node.js", "MongoDB"],
       liveUrl: "https://pocketbaseproject.vercel.app/",
       githubUrl: "https://github.com/RohanaHarsha/-Pocket_Base_Test-Guest_Management",
@@ -28,7 +28,7 @@ export default function Projects() {
     {
       title: "Word-classification-model",
       description: "This model was created to collaborate with daffodilzone website and enhances search functionality by allowing users to enter natural language queries. It extracts relevant keywords related to real estate and housing, ensuring more accurate and reliable search results.",
-      image: "/public/projects/classification_model.png",
+      image: "/Projects/classification_model.png",
       technologies: ["Python", "Tensorflow", "NumPy"],
       liveUrl: "",
       githubUrl: "https://github.com/RohanaHarsha/Word-classification-model",
@@ -38,7 +38,7 @@ export default function Projects() {
     {
       title: "Mcp-resume-server",
       description: "Mobile-responsive dashboard with real-time data visualization and analytics.",
-      image: "/projects/project4.jpg",
+      image: "/Projects/project4.jpg",
       technologies: ["React", "Chart.js", "API"],
       liveUrl: "https://your-live-site.com",
       githubUrl: "https://github.com/yourusername/project-four",
