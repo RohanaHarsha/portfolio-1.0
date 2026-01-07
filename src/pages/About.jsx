@@ -46,7 +46,7 @@ export default function About() {
             <div className="about-image-section">
                 <div className="image-wrapper">
                     <img 
-                        src="/public/profile/profile.jpg" 
+                        src="/profile/profile.jpg" 
                         alt="Your Name" 
                         onError={(e) => {
                             e.target.src = 'https://via.placeholder.com/400x600/141414/eaeaea?text=Your+Photo';
