@@ -45,26 +45,6 @@ export default function Projects() {
       isLive: false,
    
     },
-    {
-      title: "Project Five",
-      description: "Social media application with user profiles and real-time messaging features.",
-      image: "/projects/project5.jpg",
-      technologies: ["React", "Socket.io", "Express"],
-      liveUrl: "",
-      githubUrl: "https://github.com/yourusername/project-five",
-      isLive: false,
-     
-    },
-    {
-      title: "Project Six",
-      description: "Portfolio website generator with custom themes and content management system.",
-      image: "/projects/project6.jpg",
-      technologies: ["React", "Tailwind", "CMS"],
-      liveUrl: "https://your-live-site.com",
-      githubUrl: "https://github.com/yourusername/project-six",
-      isLive: true,
-    
-    }
   ];
 
 
@@ -88,6 +68,7 @@ export default function Projects() {
                 }}
               />
             </div>
+            
 
             <div className="project-content">
               <div className="project-number">0{index + 1}</div>
