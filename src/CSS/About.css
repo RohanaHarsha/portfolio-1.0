@@ -1,4 +1,4 @@
-
+/* ABOUT PAGE - DIAGONAL SPLIT LAYOUT */
 .about-diagonal {
   position: relative;
   min-height: 100vh;
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-
+/* LEFT CONTENT SECTION */
 .about-content {
   width: 60%;
   padding: 4rem 4rem 4rem 3rem;
@@ -19,53 +19,147 @@
   background-color: #0f0f0f;
 }
 
-
-.animated-text-container {
-  position: relative;
-  height: 300px;
-  padding-bottom: 0;
-  margin-bottom: 0;
+/* INTRO SECTION */
+.intro-section {
+  margin-bottom: 2rem;
 }
 
+.greeting {
+  display: block;
+  font-size: 1.25rem;
+  color: #eaeaea;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
 
-.main-title {
-  font-size: 4rem;
-  font-weight: 700;
+.name-title {
+  font-size: 4.5rem;
+  font-weight: 800;
   color: #eaeaea;
   margin: 0 0 1.5rem 0;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
+  background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ROLE CONTAINER */
+.role-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.role-prefix {
+  font-size: 1.5rem;
+  color: #eaeaea;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.rotating-role {
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.role-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f0f0f;
+  background: linear-gradient(135deg, #eaeaea 0%, #ffffff 100%);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  display: inline-flex;
+  box-shadow: 0 4px 12px rgba(234, 234, 234, 0.2);
+}
+
+.role-letter {
+  overflow: hidden;
+  display: inline-block;
 }
 
 /* DESCRIPTION */
 .about-description {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.8;
   color: #eaeaea;
   opacity: 0.85;
-  margin: 0 0 2rem 0;
+  margin: 0 0 2.5rem 0;
   max-width: 600px;
 }
 
-/* CTA BUTTON */
+/* QUICK STATS */
+.quick-stats {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #eaeaea;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #eaeaea;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CTA GROUP */
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .cta-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2.5rem;
-  background-color: #eaeaea;
-  color: #0f0f0f;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 6px;
   transition: all 0.3s ease;
-  width: fit-content;
+  border: none;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
-.cta-button::before {
+.cta-button svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-button.primary {
+  background-color: #eaeaea;
+  color: #0f0f0f;
+}
+
+.cta-button.primary::before {
   content: '';
   position: absolute;
   top: 0;
@@ -76,17 +170,37 @@
   transition: left 0.5s ease;
 }
 
-.cta-button:hover::before {
+.cta-button.primary:hover::before {
   left: 100%;
 }
 
-.cta-button:hover {
+.cta-button.primary:hover {
   background-color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(234, 234, 234, 0.3);
 }
 
-/* This adjust the picture container */
+.cta-button.primary:hover svg {
+  transform: translateX(4px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #eaeaea;
+  border: 2px solid #333;
+}
+
+.cta-button.secondary:hover {
+  border-color: #eaeaea;
+  background-color: #1a1a1a;
+  transform: translateY(-3px);
+}
+
+.cta-button.secondary:hover svg {
+  transform: translateY(2px);
+}
+
+/* YOUR EXISTING IMAGE SECTION - KEPT AS IS */
 .about-image-section {
   position: absolute;
   right: 0;
@@ -104,6 +218,8 @@
   height: 100%;
   position: relative;
 }
+
+
 
 .image-wrapper img {
   width: 100%;
@@ -138,16 +254,21 @@
     padding: 3rem 2rem;
   }
 
-  .main-title {
-    font-size: 3rem;
+  .name-title {
+    font-size: 3.5rem;
+  }
+
+  .role-prefix,
+  .role-text {
+    font-size: 1.25rem;
   }
 
   .about-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
-  .animated-text-container {
-    height: 250px;
+  .quick-stats {
+    gap: 2rem;
   }
 }
 
@@ -163,16 +284,41 @@
     position: relative;
   }
 
-  .main-title {
+  .name-title {
     font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+
+  .role-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role-prefix,
+  .role-text {
+    font-size: 1.1rem;
   }
 
   .about-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
-  .animated-text-container {
-    height: 200px;
+  .quick-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .cta-group {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
   }
   
   .about-image-section {
@@ -182,11 +328,6 @@
     position: relative;
     clip-path: none;
   }
-
-  .cta-button {
-    width: 100%;
-    max-width: 300px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -194,12 +335,21 @@
     padding: 2rem 1rem;
   }
 
-  .main-title {
+  .greeting {
+    font-size: 1rem;
+  }
+
+  .name-title {
     font-size: 2rem;
   }
 
-  .animated-text-container {
-    height: 150px;
+  .role-prefix,
+  .role-text {
+    font-size: 1rem;
+  }
+
+  .quick-stats {
+    gap: 1rem;
   }
 
   .about-image-section {
