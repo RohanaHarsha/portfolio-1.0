@@ -10,8 +10,8 @@ export default function About() {
     }
 
     const roles = [
-        'Business Analyst',
         'Software Engineer',
+        'Business Analyst',
         'Data Analyst'
     ];
 
@@ -50,11 +50,11 @@ export default function About() {
 
                 <div className="quick-stats">
                     <div className="stat-item">
-                        <span className="stat-number">3+</span>
+                        <span className="stat-number">1+</span>
                         <span className="stat-label">Years Experience</span>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-number">15+</span>
+                        <span className="stat-number">4</span>
                         <span className="stat-label">Projects Completed</span>
                     </div>
                     <div className="stat-item">
