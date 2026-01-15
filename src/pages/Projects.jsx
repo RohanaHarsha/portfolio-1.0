@@ -19,7 +19,7 @@ export default function Projects() {
     },
     {
       title: "Pocket_Base_Test-Guest_Management",
-      description: "This is a Simple UI to to test newest database technology PocketBase. It is simple, reliable and effective and beginner and user friendly. If you want to to try it be my guest, clone the repo and enjoy",
+      description: "This is a Simple UI to to test newest database technology PocketBase. It is simple,effective and beginner friendly. If you want to to try it be my guest, clone the repo and enjoy",
       image: "/projects/pocketbase.png",
       technologies: ["React", "Node.js", "MongoDB"],
       liveUrl: "https://pocketbaseproject.vercel.app/",

@@ -11,6 +11,7 @@ export default function About() {
 
     const roles = [
         'Software Engineer',
+        'Cloud Engineer',
         'Business Analyst',
         'Data Analyst'
     ];
