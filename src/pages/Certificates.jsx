@@ -11,22 +11,11 @@ export default function Certificates() {
       description: "Professional certification demonstrating expertise in designing distributed systems on AWS.",
       image: "/projects/aws_cert.png",
       issueDate: "2023-06-15",
-      credentialId: "AWS-123456789",
-      verifyUrl: "https://aws.amazon.com/verification",
+      credentialId: "ID 6KLEWFCYP2IG",
       isVerified: true,
     },
     {
-      title: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      description: "Certification for building scalable and highly available applications on Google Cloud Platform.",
-      image: "/projects/gcp_cert.png",
-      issueDate: "2023-08-20",
-      credentialId: "GCP-987654321",
-      verifyUrl: "https://cloud.google.com/certification",
-      isVerified: true,
-    },
-    {
-      title: "React Developer Certification",
+      title: "React Basics Certification",
       issuer: "Meta (Facebook)",
       description: "Official certification for React development skills and best practices.",
       image: "/projects/react_cert.png",
@@ -35,9 +24,19 @@ export default function Certificates() {
       verifyUrl: "https://developers.facebook.com/certifications",
       isVerified: true,
     },
+     {
+      title: "Getting Started with Git and GitHub",
+      issuer: "IMB",
+      description: "Certification for mastering Git and GitHub version control systems.",
+      image: "/projects/git_cert.png",
+      issueDate: "2023-09-15",
+      credentialId: "IMB-GIT-123456",
+      verifyUrl: "https://www.ibm.com/certification",
+      isVerified: true,
+    },
     {
-      title: "Python Programming Certification",
-      issuer: "Python Institute",
+      title: "Python",
+      issuer: "Kaggle",
       description: "Certification validating proficiency in Python programming language.",
       image: "/projects/python_cert.png",
       issueDate: "2022-12-05",
@@ -45,49 +44,40 @@ export default function Certificates() {
       verifyUrl: "https://pythoninstitute.org/certification",
       isVerified: true,
     },
-    {
-      title: "JavaScript Fundamentals",
-      issuer: "FreeCodeCamp",
-      description: "Completed JavaScript algorithms and data structures certification.",
-      image: "/projects/js_cert.png",
-      issueDate: "2023-07-01",
-      credentialId: "FCC-JS-789",
-      verifyUrl: "https://freecodecamp.org/certification",
+   {
+      title: "Introduction to Machine Learning",
+      issuer: "Kaggle",
+      description: "Certification for foundational knowledge in machine learning concepts and techniques.",
+      image: "/projects/ml_cert.png",
+      issueDate: "2022-12-05",
+      credentialId: "PCPP-123456",
+      verifyUrl: "https://pythoninstitute.org/certification",
       isVerified: true,
     },
   ];
 
   const sportsCertificates = [
     {
-      title: "Football Championship",
-      issuer: "Local Sports Association",
-      description: "Won first place in regional football championship.",
-      image: "/projects/football_cert.png",
-      issueDate: "2024-05-15",
-      credentialId: "SPORT-001",
+      title: "Karate Certificate of Honor",
+      issuer: "Karate Association",
+      description: "Certificate of honor for kumite achievements.",
+      image: "/projects/karate_cert.png",
+      issueDate: "2024-06-01",
+      credentialId: "KARATE-001",
       verifyUrl: null,
       isVerified: false,
     },
     {
-      title: "Swimming Competition",
-      issuer: "City Swimming Club",
-      description: "Gold medal in 100m freestyle swimming competition.",
-      image: "/projects/swimming_cert.png",
-      issueDate: "2024-03-20",
-      credentialId: "SPORT-002",
+      title: "Zonal Music Competition - Instrumental",
+      issuer: "Music Education Board",
+      description: "Certificate in zonal music competition.",
+      image: "/projects/music_cert1.png",
+      issueDate: "2024-04-15",
+      credentialId: "MUSIC-001",
       verifyUrl: null,
       isVerified: false,
     },
-    {
-      title: "Basketball Tournament",
-      issuer: "School Sports Department",
-      description: "Team captain and MVP in inter-school basketball tournament.",
-      image: "/projects/basketball_cert.png",
-      issueDate: "2023-11-10",
-      credentialId: "SPORT-003",
-      verifyUrl: null,
-      isVerified: false,
-    },
+   
   ];
 
 
@@ -125,7 +115,7 @@ export default function Certificates() {
       </div>
 
       <div className="certificates-category">
-        <h3>Sports Achievements</h3>
+        <h3>Sports & Other Achievements</h3>
         <div className="certificates-grid">
           {sportsCertificates.map((certificate, index) => (
             <div key={index} className="certificate-card">
