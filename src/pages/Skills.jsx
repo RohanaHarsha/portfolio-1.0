@@ -4,7 +4,6 @@ export default function Skills() {
   const Languages = [
     { name: "Python", level: 90 },
     { name: "JavaScript (ES6+)", level: 90 },
-    { name: "TypeScript", level: 20 },
     { name: "HTML & CSS", level: 90 },
     { name: "PHP", level: 90 },
   ];
