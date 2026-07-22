@@ -10,10 +10,9 @@ export default function About() {
     }
 
     const roles = [
-        'Software Engineer',
-        'Cloud Engineer',
-        'Business Analyst',
-        'Data Analyst'
+        'Odoo technical support',
+        'SAP technical Support',
+        'Data | BI Analyst'
     ];
 
     return (
@@ -43,24 +42,24 @@ export default function About() {
                 </div>
 
                 <p className="about-description">
-                    I combine software engineering expertise with data analysis and business acumen
-                    to solve complex problems. Whether it's building web applications, extracting
-                    insights from data, or gathering requirements to align technology with business
-                    goals, I create solutions that matter.
+                    I'm Rohana Wickramarathna, a recent BSc (Hons) Industrial Information Technology graduand 
+                    from Uva Wellassa University. I'm building a career at the intersection of business and 
+                    technology, willing to start with a foundation in analytics or whatever role fits to get me to my end goal, 
+                    which is growing toward becoming an ERP Technical Consultant. 
+                    During my internship at the National Science Foundation of Sri Lanka, 
+                    I independently built an internal ERP system and handled network administration, 
+                    which shaped my interest in how organizations actually run their systems, 
+                    not just how the code behind them works.
                 </p>
 
                 <div className="quick-stats">
                     <div className="stat-item">
-                        <span className="stat-number">1+</span>
+                        <span className="stat-number">6 months</span>
                         <span className="stat-label">Years Experience</span>
                     </div>
                     <div className="stat-item">
                         <span className="stat-number">4</span>
                         <span className="stat-label">Projects Completed</span>
-                    </div>
-                    <div className="stat-item">
-                        <span className="stat-number">100%</span>
-                        <span className="stat-label">Client Satisfaction</span>
                     </div>
                 </div>
 
@@ -85,7 +84,7 @@ export default function About() {
                 <div className="image-wrapper">
 
                     <img
-                        src="/Profile/profile.jpg"
+                        src="/Profile/profile.png"
                         alt="Rohana Harsha"
                         onError={(e) => {
                             e.target.src = 'https://via.placeholder.com/400x600/141414/eaeaea?text=Profile';
